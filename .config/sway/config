@@ -251,6 +251,14 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
+#Screenshot
+bindsym --release Print exec grimshot save screen
+bindsym --release Shift+Print exec grimshot save area
+bindsym --release Ctrl+Print exec grimshot copy screen
+bindsym --release Ctrl+Shift+Print exec grimshot copy area
+bindsym --release Alt+Print exec grimshot save win
+bindsym --release Shift+Alt+Print exec grimshot copy win
+
 #Window border specification
 default_border none
 #Gaps between and outside windows
