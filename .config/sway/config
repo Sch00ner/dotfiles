@@ -34,7 +34,7 @@ set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/sounak/Pictures/beaut.jpg fill
+output * bg /home/sounak/Pictures/mendoza.jpg fill
 #
 # Example configuration:
 #
@@ -46,11 +46,11 @@ output * bg /home/sounak/Pictures/beaut.jpg fill
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' \
-               resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -252,17 +252,25 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 #Screenshot
+#Saves the whole screen
 bindsym --release Print exec grimshot save screen
+#Brings up a selection to save are
 bindsym --release Shift+Print exec grimshot save area
+#Copies screen to clipboard
 bindsym --release Ctrl+Print exec grimshot copy screen
+#Copies area to clipboard
 bindsym --release Ctrl+Shift+Print exec grimshot copy area
+#Saves a window
 bindsym --release Alt+Print exec grimshot save win
+#Copies a window to clipboard
 bindsym --release Shift+Alt+Print exec grimshot copy win
 
 #Window border specification
-default_border none
+#Moved to file in themes
+#default_border none
 #Gaps between and outside windows
-gaps inner 8
-gaps outer 8
+#gaps inner 8
+#gaps outer 8
 
 include /etc/sway/config.d/*
+include ~/.config/sway/themes/gruvbox
