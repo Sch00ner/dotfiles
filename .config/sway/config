@@ -272,5 +272,9 @@ bindsym --release Shift+Alt+Print exec grimshot copy win
 #gaps inner 8
 #gaps outer 8
 
+#Starting Gnome polkit agent for password prompt for Gnome applications
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+#Include additional directories for Sway rules and customisation
 include /etc/sway/config.d/*
 include ~/.config/sway/themes/gruvbox
