@@ -18,7 +18,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun --insensitive --allow-images --term=Alacritty | xargs swaymsg exec --
 
 #set $ws1 "  "
 #set $ws2 "  "
@@ -47,10 +47,10 @@ output * bg /home/sounak/Pictures/mendoza.jpg fill
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f' \
          timeout 600 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock -f'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -89,6 +89,9 @@ exec swayidle -w \
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
+
+	#Lock the screen
+	bindsym $mod+g exec swaylock
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -241,6 +244,7 @@ bar {
     }
 }
 
+#Starting the notification service
 exec mako
 
 #Volume and brightness control Function keys
@@ -254,7 +258,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 #Screenshot
 #Saves the whole screen
 bindsym --release Print exec grimshot save screen
-#Brings up a selection to save are
+#Brings up a selection to save area
 bindsym --release Shift+Print exec grimshot save area
 #Copies screen to clipboard
 bindsym --release Ctrl+Print exec grimshot copy screen
