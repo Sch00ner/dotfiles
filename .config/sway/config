@@ -281,6 +281,9 @@ bindsym --release Shift+Alt+Print exec grimshot copy win
 #Starting Gnome polkit agent for password prompt for Gnome applications
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+#Brings up the logout menu
+bindsym $mod+p exec wlogout -p layer-shell
+
 #Include additional directories for Sway rules and customisation
 include /etc/sway/config.d/*
 include ~/.config/sway/themes/gruvbox
