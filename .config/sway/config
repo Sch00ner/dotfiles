@@ -259,17 +259,17 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 #Screenshot
 #Saves the whole screen
-bindsym --release Print exec grimshot save screen
+bindsym --release Print exec grimshot --notify save screen
 #Brings up a selection to save area
-bindsym --release Shift+Print exec grimshot save area
+bindsym --release Shift+Print exec grimshot --notify save area
 #Copies screen to clipboard
-bindsym --release Ctrl+Print exec grimshot copy screen
+bindsym --release Ctrl+Print exec grimshot --notify copy screen
 #Copies area to clipboard
-bindsym --release Ctrl+Shift+Print exec grimshot copy area
+bindsym --release Ctrl+Shift+Print exec grimshot --notify copy area
 #Saves a window
-bindsym --release Alt+Print exec grimshot save win
+bindsym --release Alt+Print exec grimshot --notify save win
 #Copies a window to clipboard
-bindsym --release Shift+Alt+Print exec grimshot copy win
+bindsym --release Shift+Alt+Print exec grimshot --notify copy win
 
 #Window border specification
 #Moved to file in themes
