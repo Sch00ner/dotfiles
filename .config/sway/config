@@ -18,7 +18,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --show drun --insensitive --allow-images --term=Alacritty | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun --insensitive --allow-images | xargs swaymsg exec --
 
 #set $ws1 "  "
 #set $ws2 "  "
@@ -283,6 +283,8 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #Brings up the logout menu
 bindsym $mod+p exec wlogout -p layer-shell
+#Choose a network connection with wofi
+bindsym $mod+c exec ~/.config/sway/scripts/wifi.sh
 
 #Include additional directories for Sway rules and customisation
 include /etc/sway/config.d/*
