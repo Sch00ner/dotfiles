@@ -79,6 +79,26 @@
         },
         "on-click": "pavucontrol"
     },
+    
+    "battery": {
+        "interval": 1,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": " {capacity}%", // Icon: bolt
+        "format-discharging": "{icon} {capacity}%",
+        "format-icons": {
+            "battery empty": "", // Icon: battery-full
+            "battery-quarter": "", // Icon: battery-three-quarters
+            "battery-half": "", // Icon: battery-half
+            "battery-three-quarters": "", // Icon: battery-quarter
+            "battery-full": ""  // Icon: battery-empty
+        },
+        "tooltip": true,
+        "on-click": "wlogout -p layer-shell"
+    },
+    
     "custom/music": {
     "format": "  {}",
     "max-length": 60,
