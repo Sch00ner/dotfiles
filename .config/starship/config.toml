@@ -1,0 +1,23 @@
+# Set two line prompt
+
+[line_break]
+disabled = true
+
+# Don't print a new line at the start of the prompt
+
+add_newline = false 
+
+# Shows status of last shell command
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[➜](bold red) "
+
+# Shows exit code of previous command
+
+[status]
+#style = "bg:blue"
+symbol = "🔴"
+format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
