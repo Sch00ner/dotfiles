@@ -9,9 +9,9 @@ add_newline = false
 
 # Shows status of last shell command
 
-[character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[➜](bold red) "
+#[character]
+#success_symbol = "[➜](bold green) "
+#error_symbol = "[➜](bold red) "
 
 # Shows exit code of previous command
 

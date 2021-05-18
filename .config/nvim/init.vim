@@ -7,8 +7,12 @@ set shiftwidth=4
 set noexpandtab
 set autoindent
 set termguicolors
-let g:airline_powerline_fonts = 1
-let g:airline_theme='wombat'
+set background=dark
+set guifont=FiraCode\ Nerd\ Font\ SemiBold:h15
+let g:airline_powerline_fonts = 1 
+let g:airline_theme='gruvbox'
+syntax enable
+filetype plugin indent on
 
 " Auto-install vim-plug                                                                                                                
 "if empty(glob('~/.config/nvim/autoload/plug.vim'))                                                                                    
@@ -20,4 +24,11 @@ let g:airline_theme='wombat'
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'morhetz/gruvbox'
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python -m chadtree deps'}
 call plug#end()
+
+" Load theme after other plugins
+autocmd vimenter * ++nested colorscheme gruvbox
