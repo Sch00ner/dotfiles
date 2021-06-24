@@ -23,3 +23,8 @@ export STARSHIP_CONFIG=~/.config/starship/config.toml
 # Setting default text editor to neovim
 export VISUAL=nvim
 export EDITOR="$VISUAL" 
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
