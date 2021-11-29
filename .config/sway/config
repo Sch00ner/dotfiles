@@ -284,6 +284,9 @@ bindsym --release Shift+Alt+Print exec grimshot --notify copy win
 #Starting Gnome polkit agent for password prompt for Gnome applications
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+#Starting Network Manager Applet
+exec nm-applet --indicator
+
 #Brings up the logout menu
 bindsym $mod+p exec wlogout -p layer-shell
 
@@ -293,3 +296,8 @@ bindsym $mod+c exec ~/.config/sway/scripts/wifi.sh
 #Include additional directories for Sway rules and customisation
 include /etc/sway/config.d/*
 include ~/.config/sway/themes/gruvbox
+
+#Making certain windows floating
+for_window [title="MetaMask Notification"] floating enable
+for_window [title="Keplr"] floating enable
+for_window [title="Oasis Wallet"] floating enable
